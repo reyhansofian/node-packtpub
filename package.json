@@ -1,0 +1,29 @@
+{
+  "name": "node-packtpub",
+  "version": "1.0.0",
+  "description": "Grab free Packtpub free ebooks everyday",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reyhan Sofian",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "chalk": "^1.1.3",
+    "cheerio": "^0.22.0",
+    "node-emoji": "^1.5.1",
+    "ora": "^1.2.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "yargs": "^7.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
+}
