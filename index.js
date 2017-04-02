@@ -13,7 +13,7 @@ if (!semver.satisfies(process.version, version)) {
 }
 
 program
-  .version('1.0.0')
+  .version('1.6.0')
   .option('-u, --user <email>', 'Your Packtpub registered email')
   .option('-p, --password <password>', 'Your Packtpub password')
   .option('-o, --outputDir <outputDir>', 'Output directory')

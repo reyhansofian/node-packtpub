@@ -1,6 +1,6 @@
 {
   "name": "node-packtpub",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Grab free Packtpub free ebooks everyday",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,6 @@
     "bluebird": "^3.5.0",
     "cheerio": "^0.22.0",
     "commander": "^2.9.0",
-    "commander-tabtab": "^0.1.0",
     "mkdirp": "^0.5.1",
     "node-emoji": "^1.5.1",
     "ora": "^1.2.0",
@@ -30,5 +29,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3"
+  },
+  "bin": {
+    "node-pt": "./index.js"
   }
 }
