@@ -139,9 +139,14 @@ class Crawler {
           bookImage: `https:${bookImageUrl}`,
           claimUrl,
         };
-      })
-      .then((result) => {
-        const { bookTitle, bookSummary, bookImage, claimUrl } = result;
+      });
+  }
+
+  downloadDealOfTheDay() {
+    return this.login()
+      .then(() => this.fetchDealOfTheDay())
+      .then((dealData) => {
+        const { bookTitle, bookSummary, bookImage, claimUrl } = dealData;
         const nid = claimUrl.split('/')[2];
 
         this.spinner.text = 'Downloading deal of the day ebook...';
@@ -178,12 +183,7 @@ class Crawler {
               bookDownloadUrls,
             };
           });
-      });
-  }
-
-  downloadDealOfTheDay() {
-    return this.login()
-      .then(() => this.fetchDealOfTheDay())
+      })
       .then(res => this.download(res))
       .catch((err) => {
         console.log(err);

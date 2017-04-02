@@ -1,6 +1,6 @@
 {
-  "name": "node-packtpub",
-  "version": "1.6.0",
+  "name": "node-packtpub-download",
+  "version": "1.7.0",
   "description": "Grab free Packtpub free ebooks everyday",
   "main": "index.js",
   "scripts": {
