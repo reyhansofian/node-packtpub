@@ -35,6 +35,6 @@
     "eslint-plugin-react": "^6.10.3"
   },
   "bin": {
-    "node-pt": "./index.js"
+    "node-pt": "./cli.js"
   }
 }
