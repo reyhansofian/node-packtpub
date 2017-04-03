@@ -4,7 +4,7 @@ Download today's **Deals of the Day** from Packtpub.
 
 ## How to Use
 
-1. Run `npm install -g packt-deals-downloader`
+1. Run `npm install -g node-packtpub-download`
 2. To download, you can run `node-pt --user example@gmail.com --password yourpassword`
 3. It will be downloaded to your current directory inside `downloads` directory
 
