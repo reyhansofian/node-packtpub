@@ -117,10 +117,20 @@ class Crawler {
           symbol: `${emoji.get('coffee')} `,
         });
 
+        const bookSummary = [];
         const $dealOfTheDay = $('#deal-of-the-day');
         const $claimButton = $dealOfTheDay.find('.dotd-main-book-form.cf');
         const bookTitle = $dealOfTheDay.find('.dotd-title').children().html().trim();
-        const bookSummary = $claimButton.prev().html().trim();
+        const summary = $claimButton.prev();
+
+        if ($claimButton.prev().contents().is('ul')) {
+          $claimButton.prev().find('li').each((i, el) => {
+            bookSummary.push($(el).html());
+          });
+        } else {
+          bookSummary.push(summary.html().trim());
+        }
+
         const bookImageUrl = $dealOfTheDay
           .find('.bookimage.imagecache.imagecache-dotd_main_image')
           .first()
@@ -135,7 +145,7 @@ class Crawler {
 
         return {
           bookTitle,
-          bookSummary,
+          bookSummary: `${bookSummary.join('. ').trim()}.`,
           bookImage: `https:${bookImageUrl}`,
           claimUrl,
         };
